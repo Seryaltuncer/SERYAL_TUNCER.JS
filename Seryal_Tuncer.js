@@ -171,7 +171,7 @@
         });
         card.appendChild(name);
   
-        // Rating yıldızları
+        // Rating 
         const rating = document.createElement("div");
         rating.style.display = "flex";
         rating.style.alignItems = "center";
@@ -191,10 +191,10 @@
         rating.appendChild(reviewCount);
         card.appendChild(rating);
   
-        // İndirim bilgisi
+        // Discount Information
         if (product.discount) {
           const discountBadge = document.createElement("div");
-          discountBadge.textContent = `%${product.discount} 😊️`;
+          discountBadge.textContent = `%${product.discount} `;
           discountBadge.style.color = "#d32f2f";
           discountBadge.style.fontSize = "14px";
           discountBadge.style.fontWeight = "600";
@@ -202,7 +202,7 @@
           card.appendChild(discountBadge);
         }
   
-        // Orijinal fiyat
+        // Original Price
         if (product.original_price) {
           const originalPrice = document.createElement("div");
           originalPrice.textContent = `${product.original_price.toFixed(2).replace('.', ',')} TL`;
@@ -213,7 +213,7 @@
           card.appendChild(originalPrice);
         }
   
-        // İndirimli fiyat
+        // Discount Price
         const price = document.createElement("div");
         price.textContent = `${product.price.toFixed(2).replace('.', ',')} TL`;
         price.style.color = "#d32f2f";
